@@ -1,0 +1,1 @@
+# Harshad-or-Niven-series
