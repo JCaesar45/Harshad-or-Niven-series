@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshad Visualizer Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="particle-bg" id="particleBg"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <h1 class="title">
+        <span class="gradient-text">Harshad</span> Visualizer
+      </h1>
+      <p class="subtitle">Interactive Niven Series Explorer</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="control-panel">
+      <div class="input-group">
+        <label for="startNum">Starting Number</label>
+        <input type="number" id="startNum" value="10" min="0">
+      </div>
+      <div class="input-group">
+        <label for="count">Results</label>
+        <input type="number" id="count" value="10" min="1" max="50">
+      </div>
+      <button id="generateBtn" class="btn-primary">
+        <span class="btn-text">Generate</span>
+        <span class="btn-glow"></span>
+      </button>
+    </section>
+
+    <section class="results-grid">
+      <div class="card result-card">
+        <h3>Sequence</h3>
+        <div id="sequenceDisplay" class="sequence-display">
+          <span class="placeholder">Enter a number to begin</span>
+        </div>
+      </div>
+
+      <div class="card stats-card">
+        <h3>Statistics</h3>
+        <div id="statsDisplay">
+          <div class="stat-item">
+            <span class="stat-label">Sum of Digits</span>
+            <span id="sumDigits" class="stat-value">—</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Divisibility</span>
+            <span id="divisibility" class="stat-value">—</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Primes in Sequence</span>
+            <span id="primeCount" class="stat-value">—</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visualization">
+      <div class="card">
+        <h3>Visual Distribution</h3>
+        <canvas id="distributionChart" width="800" height="400"></canvas>
+      </div>
+    </section>
+
+    <section class="code-showcase">
+      <h3>Multi-Language Implementations</h3>
+      <div class="tab-container">
+        <button class="tab-btn active" data-lang="js">JavaScript</button>
+        <button class="tab-btn" data-lang="py">Python</button>
+        <button class="tab-btn" data-lang="ts">TypeScript</button>
+        <button class="tab-btn" data-lang="java">Java</button>
+      </div>
+      <div class="code-display" id="codeDisplay">
+        <pre><code id="codeContent"></code></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
